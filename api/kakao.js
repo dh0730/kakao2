@@ -1,8 +1,10 @@
+
 export default function handler(req, res) {
   // 카카오 챗봇은 POST로 요청을 보냅니다.
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
+  sendToGAS();
 
   // 요청 body 받기
   const body = req.body;
@@ -24,4 +26,23 @@ export default function handler(req, res) {
 };
 
   return res.status(200).json(response);
+}
+
+async function sendToGAS() {
+  const url = 'https://script.google.com/macros/s/AKfycbzdtMEySQC6--sVaaRB_LjlDqMXlmo42LH3hp-ennB7NulTxXEAhl5G9Owh1tyorfza/exec';
+
+  const payload = {
+    message: 'Node.js에서 fetch 사용',
+  };
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const result = await response.json();
+  console.log('응답:', result);
 }
