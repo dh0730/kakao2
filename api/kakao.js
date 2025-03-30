@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export default function handler(req, res) {
   // 카카오 챗봇은 POST로 요청을 보냅니다.
   if (req.method !== 'POST') {
