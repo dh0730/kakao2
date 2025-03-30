@@ -1,6 +1,6 @@
 {
   "name": "kakao-vercel-skill",
   "version": "1.0.0",
-  "main": "api/kakao.js",
+  "main": "api/kakao2.js",
   "type": "module"
 }
