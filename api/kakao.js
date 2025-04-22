@@ -29,7 +29,7 @@ export default function handler(req, res) {
 }
 
 async function sendToGAS() {
-  const url = 'https://script.google.com/macros/s/AKfycbzdtMEySQC6--sVaaRB_LjlDqMXlmo42LH3hp-ennB7NulTxXEAhl5G9Owh1tyorfza/exec';
+  const url = 'https://script.google.com/macros/s/AKfycbyKPk8-EGoh_V5fn4hiagmoroqVmteFrF-kHtxNA_ODoDX9smMm4AzCU8uJSZI3rUmK/exec';
 
   const payload = {
     message: 'Node.js에서 fetch 사용',
